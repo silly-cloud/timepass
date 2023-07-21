@@ -1,0 +1,203 @@
+body {
+  margin: 0;
+  
+  background-color: #F2E9DF;
+  font-family: 'Montserrat', sans-serif;
+}
+.wrapper {
+  display: grid;
+  grid-template-areas:
+      "header"
+      "navbar"
+      "main"
+      "bottom"
+      "footer";
+  grid-template-rows: auto auto 1fr auto;
+  min-height: 100vh;
+}
+.header{
+  background-color: black;
+  color: white;
+  padding: 0 20px;
+}
+h1 {
+  font-size: 72px;
+  margin: 0;
+  padding: 0;
+}
+
+.bio {
+  padding: 3px;
+}
+
+.work {
+  margin-top: 100px;
+  margin-bottom: 0;
+}
+
+.navbar {
+  text-align: right;
+  font-weight: 600;
+  padding: 20px 50px 0 ;
+}
+
+.navbar-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: large;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #4A403A;
+  padding: 10px;
+}
+
+.nav-item a:hover {
+  color: #222;
+}
+
+.middle,
+.bottom {
+  margin-top: 2vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.middle {
+  color: #4A403A;
+}
+
+.column,
+.card {
+  flex: 1;
+  margin: 20px;
+  padding: 30px;
+}
+
+.description {
+  text-align: left;
+}
+
+.me {
+  border-radius: 100%;
+  width: 250px;
+  height: 250px;
+}
+
+.card {
+  border-radius: 50px;
+  color: white;
+  border: 2px solid #222;
+}
+
+.left {
+  background-color: #BC4B00;
+}
+
+.right {
+  background-color: #63082C;
+}
+
+.footer {
+  text-align: center;
+}
+
+button {
+  background-color: #8EAA97;
+  border: 1px solid #222;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: large;
+  padding: 5px 30px;
+  margin: 10px;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 768px) {
+  body {
+    padding: 0 10px;
+  }
+
+  .column,
+  .card {
+    flex: 1 1 100%;
+    margin: 10px 0;
+  }
+
+  .me {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    max-height: 250px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .column,
+  .card {
+    padding: 20px;
+  }
+}
+
+/* Additional Styles */
+
+/* Styles for specific elements */
+
+.bio p {
+  font-style: italic;
+  color: #555;
+}
+
+.work p {
+  font-size: 20px;
+}
+
+.card-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card-content {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Custom class */
+
+.custom-btn {
+  background-color: #FFA500;
+  color: white;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.custom-btn:hover {
+  background-color: #FF8C00;
+}
+
+/* Inline styles */
+
+.inline-style {
+  font-weight: bold;
+  color: #4A403A;
+}
+
+.inline-style span {
+  text-decoration: underline;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #e8c478;
+  padding: 10px;
+  font-size: small;
+}
